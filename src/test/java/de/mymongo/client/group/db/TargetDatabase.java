@@ -1,9 +1,9 @@
-package de.mymongo.client.db;
+package de.mymongo.client.group.db;
 
 import com.mongodb.DB;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
-import de.mymongo.client.collection.TargetCollection;
+import de.mymongo.client.group.collection.TargetCollection;
 
 public class TargetDatabase extends DB {
 

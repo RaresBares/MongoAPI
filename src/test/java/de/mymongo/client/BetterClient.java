@@ -1,9 +1,7 @@
 package de.mymongo.client;
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
-import de.mymongo.client.db.TargetDatabase;
+import de.mymongo.client.group.db.TargetDatabase;
 
 public class BetterClient extends MongoClient {
 
