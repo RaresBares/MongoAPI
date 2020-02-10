@@ -1,4 +1,10 @@
 package de.mymongo.client.collection;
 
-public class TargetCollection {
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+
+public class TargetCollection extends DBCollection {
+    protected TargetCollection(DB database, String name) {
+        super(database, name);
+    }
 }

@@ -3,17 +3,35 @@ package de.mymongo.client;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
+import de.mymongo.client.db.TargetDatabase;
 
 public class BetterClient extends MongoClient {
 
-    private DB target = null;
+    private TargetDatabase target = null;
 
     public BetterClient(String host, int port) {
         super(host,port);
     }
 
-    public void setTarget(String db) {
-        DB datab = getDB(db);
+    public void target(String db) {
+        TargetDatabase datab = new TargetDatabase(this, db);
         this.target = datab;
     }
+
+    public TargetDatabase getTarget() {
+        return target;
+    }
+
+    public void createDB(String name){
+        if(!getDatabaseNames().contains(name)){
+            createDB(name);
+        }else {
+            System.out.println("DB exists!");
+        }
+
+
+    }
+
+
+
 }
