@@ -3,11 +3,11 @@ package de.mymongo.client;
 import com.mongodb.MongoClient;
 import de.mymongo.client.group.db.TargetDatabase;
 
-public class BetterClient extends MongoClient {
+public class MyMongoClient extends MongoClient {
 
     private TargetDatabase target = null;
 
-    public BetterClient(String host, int port) {
+    public MyMongoClient(String host, int port) {
         super(host,port);
     }
 

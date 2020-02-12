@@ -1,15 +1,14 @@
 package de.mymongo;
 
-import com.mongodb.MongoClient;
-import de.mymongo.client.BetterClient;
+import de.mymongo.client.MyMongoClient;
 
 public class myMongo {
 
-    private BetterClient client = null;
+    private MyMongoClient client = null;
     private static myMongo myMongo = null;
 
     private myMongo(String host, int port) {
-        client = new BetterClient(host, port);
+        client = new MyMongoClient(host, port);
     }
 
     public static de.mymongo.myMongo getMyMongo(String host, int port) {
@@ -22,7 +21,7 @@ public class myMongo {
 
     }
 
-  public BetterClient getClient() {
+  public MyMongoClient getClient() {
     return client;
   }
 }
